@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Password Strength Checker</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <div class="header">
+
+                <div class="icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+                <h1>Password Strength Checker</h1>
+
+                <p>Secure Your Digital Identity</p>
+
+            </div>
+
+            <!-- Password -->
+
+            <div class="password-box">
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password">
+
+                <button id="togglePassword">
+                    <i class="fa-solid fa-eye"></i>
+                </button>
+
+            </div>
+
+            <!-- Progress Bar -->
+
+            <div class="progress">
+
+                <div class="progress-bar" id="progressBar"></div>
+
+            </div>
+
+            <div class="strength">
+
+                <span>Strength :</span>
+
+                <span id="strengthText">Waiting...</span>
+
+            </div>
+
+            <div class="score">
+
+                <span>Password Score</span>
+
+                <span id="scoreText">0 / 100</span>
+
+            </div>
+
+            <!-- Requirements -->
+
+            <div class="requirements">
+
+                <h3>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Password Requirements
+                </h3>
+
+                <ul>
+
+                    <li id="length">
+                        ❌ At least 8 characters
+                    </li>
+
+                    <li id="uppercase">
+                        ❌ One uppercase letter
+                    </li>
+
+                    <li id="lowercase">
+                        ❌ One lowercase letter
+                    </li>
+
+                    <li id="number">
+                        ❌ One number
+                    </li>
+
+                    <li id="symbol">
+                        ❌ One special character
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Suggestions -->
+
+            <div class="suggestions">
+
+                <h3>
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                    Suggestions
+
+                </h3>
+
+                <ul id="suggestionsList">
+
+                    <li>Start typing your password...</li>
+
+                </ul>
+
+            </div>
+
+            <!-- Buttons -->
+
+            <div class="buttons">
+
+                
+
+                <button id="clearBtn">
+
+                    <i class="fa-solid fa-trash"></i>
+
+                    Clear
+
+                </button>
+
+            </div>
+
+            
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
