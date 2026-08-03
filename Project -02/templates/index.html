@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar Cipher Studio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="page-shell">
+        <div class="container">
+            <div class="hero">
+                <div class="badge">🔐 Secure Demo</div>
+                <h1>Caesar Cipher Studio</h1>
+                <p>Encrypt and decrypt text using a simple shift-based cipher with a polished, modern interface.</p>
+            </div>
+
+            <form method="POST" class="form-card">
+                <label for="text">Plain Text</label>
+                <textarea id="text" name="text" placeholder="Enter text to encrypt..." required>{{text}}</textarea>
+
+                <label for="shift">Shift Value</label>
+                <input id="shift" type="number" name="shift" value="{{shift}}" min="1" max="25">
+
+                <button type="submit">Encrypt & Decrypt</button>
+            </form>
+
+            {% if encrypted %}
+            <div class="result-card">
+                <div class="result-box">
+                    <h2>Encrypted Text</h2>
+                    <p>{{encrypted}}</p>
+                </div>
+                <div class="result-box">
+                    <h2>Decrypted Text</h2>
+                    <p>{{decrypted}}</p>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
