@@ -1,0 +1,16 @@
+From: newsletter@google.com
+
+Subject: Monthly Security Update
+
+Dear User,
+
+We are sharing our latest security updates and new features available on your account.
+
+For more information, please visit our official website:
+
+https://www.google.com/
+
+Thank you for using our services.
+
+Best regards,
+Google Security Team

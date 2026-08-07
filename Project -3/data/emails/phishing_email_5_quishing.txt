@@ -1,0 +1,16 @@
+From: Google Account Recovery <no-reply@accounts-google-secure.com>
+Subject: Action Required: Prevent Account Lockout
+
+Dear User,
+
+We detected unusual sign-in activity on your account. To prevent your
+account from being locked in the next 30 minutes, scan the QR code below
+with your mobile device to verify your identity.
+
+[QR CODE IMAGE]
+
+Do not ignore this message. Failure to verify within 30 minutes will
+result in permanent suspension of your account.
+
+Regards,
+Google Account Recovery Team

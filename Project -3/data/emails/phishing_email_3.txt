@@ -1,0 +1,16 @@
+From: admin@micr0soft-support.com
+
+Subject: Your Office 365 account will be disabled
+
+Dear Employee,
+
+We detected unusual activity in your account.
+
+Please confirm your information by clicking the link below.
+
+http://office365-verification.net
+
+If you fail to verify your account, access will be suspended.
+
+Thank you,
+Microsoft Support Team

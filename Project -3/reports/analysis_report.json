@@ -1,0 +1,206 @@
+[
+  {
+    "filename": "legitimate_email.txt",
+    "sender_display_name": "",
+    "sender_email": "newsletter@google.com",
+    "subject": "Monthly Security Update",
+    "urls": [
+      "https://www.google.com/"
+    ],
+    "red_flags": [],
+    "score": 0,
+    "verdict": "SAFE",
+    "action": "Close"
+  },
+  {
+    "filename": "phishing_email_1.txt",
+    "sender_display_name": "",
+    "sender_email": "support@paypa1.com",
+    "subject": "Urgent Action Required",
+    "urls": [
+      "http://paypa1-security-login.com"
+    ],
+    "red_flags": [
+      {
+        "code": "BRAND_DOMAIN_MISMATCH",
+        "severity": "high",
+        "message": "Message references brand 'paypal' but sender domain 'paypa1.com' does not match any official domain (paypal.com)."
+      },
+      {
+        "code": "LOOKALIKE_DOMAIN",
+        "severity": "high",
+        "message": "Sender domain 'paypa1.com' looks like a disguised version of 'paypal.com' (character substitution / typosquat)."
+      },
+      {
+        "code": "NON_HTTPS_URL",
+        "severity": "medium",
+        "message": "Link 'http://paypa1-security-login.com' uses unencrypted HTTP instead of HTTPS."
+      },
+      {
+        "code": "URGENCY_LANGUAGE",
+        "severity": "medium",
+        "message": "Artificial time-pressure language detected: 24 hours, act within, immediately, suspend, suspended, termination, urgent."
+      },
+      {
+        "code": "CREDENTIAL_OR_PAYMENT_REQUEST",
+        "severity": "high",
+        "message": "Message requests credentials, MFA codes, or payment/banking details: verify your account."
+      }
+    ],
+    "score": 13,
+    "verdict": "MALICIOUS",
+    "action": "Block Domain & Escalate"
+  },
+  {
+    "filename": "phishing_email_2.txt",
+    "sender_display_name": "",
+    "sender_email": "rewards@amaz0n-gifts.com",
+    "subject": "Congratulations! You have won a prize.",
+    "urls": [
+      "http://amazon-reward-center.com"
+    ],
+    "red_flags": [
+      {
+        "code": "BRAND_DOMAIN_MISMATCH",
+        "severity": "high",
+        "message": "Message references brand 'amazon' but sender domain 'amaz0n-gifts.com' does not match any official domain (amazon.com)."
+      },
+      {
+        "code": "LOOKALIKE_DOMAIN",
+        "severity": "high",
+        "message": "Sender domain 'amaz0n-gifts.com' looks like a disguised version of 'amazon.com' (character substitution / typosquat)."
+      },
+      {
+        "code": "NON_HTTPS_URL",
+        "severity": "medium",
+        "message": "Link 'http://amazon-reward-center.com' uses unencrypted HTTP instead of HTTPS."
+      },
+      {
+        "code": "URGENCY_LANGUAGE",
+        "severity": "medium",
+        "message": "Artificial time-pressure language detected: 12 hours, expire, expires."
+      },
+      {
+        "code": "FEAR_OR_GREED_LANGUAGE",
+        "severity": "medium",
+        "message": "Fear/greed trigger words detected: claim, congratulations, free, gift, prize, reward, selected, won."
+      },
+      {
+        "code": "CREDENTIAL_OR_PAYMENT_REQUEST",
+        "severity": "high",
+        "message": "Message requests credentials, MFA codes, or payment/banking details: provide your personal details."
+      }
+    ],
+    "score": 15,
+    "verdict": "MALICIOUS",
+    "action": "Block Domain & Escalate"
+  },
+  {
+    "filename": "phishing_email_3.txt",
+    "sender_display_name": "",
+    "sender_email": "admin@micr0soft-support.com",
+    "subject": "Your Office 365 account will be disabled",
+    "urls": [
+      "http://office365-verification.net"
+    ],
+    "red_flags": [
+      {
+        "code": "BRAND_DOMAIN_MISMATCH",
+        "severity": "high",
+        "message": "Message references brand 'microsoft' but sender domain 'micr0soft-support.com' does not match any official domain (microsoft.com, office.com, office365.com, live.com)."
+      },
+      {
+        "code": "LOOKALIKE_DOMAIN",
+        "severity": "high",
+        "message": "Sender domain 'micr0soft-support.com' looks like a disguised version of 'microsoft.com' (character substitution / typosquat)."
+      },
+      {
+        "code": "NON_HTTPS_URL",
+        "severity": "medium",
+        "message": "Link 'http://office365-verification.net' uses unencrypted HTTP instead of HTTPS."
+      },
+      {
+        "code": "URGENCY_LANGUAGE",
+        "severity": "medium",
+        "message": "Artificial time-pressure language detected: disable, disabled, suspend, suspended."
+      },
+      {
+        "code": "FEAR_OR_GREED_LANGUAGE",
+        "severity": "medium",
+        "message": "Fear/greed trigger words detected: unusual activity."
+      },
+      {
+        "code": "CREDENTIAL_OR_PAYMENT_REQUEST",
+        "severity": "high",
+        "message": "Message requests credentials, MFA codes, or payment/banking details: confirm your information, verify your account."
+      }
+    ],
+    "score": 15,
+    "verdict": "MALICIOUS",
+    "action": "Block Domain & Escalate"
+  },
+  {
+    "filename": "phishing_email_4_bec.txt",
+    "sender_display_name": "CEO Name",
+    "sender_email": "ceo.urgent@executive-update.com",
+    "subject": "IMMEDIATE ACTION REQUIRED: Transfer Authorization",
+    "urls": [],
+    "red_flags": [
+      {
+        "code": "URGENCY_LANGUAGE",
+        "severity": "medium",
+        "message": "Artificial time-pressure language detected: immediate action, immediately, urgent."
+      },
+      {
+        "code": "AUTHORITY_IMPERSONATION",
+        "severity": "low",
+        "message": "Message invokes authority/executive figures: ceo, confidential, executive, strictly confidential."
+      },
+      {
+        "code": "BYPASS_OR_SECRECY_REQUEST",
+        "severity": "high",
+        "message": "Message asks the recipient to bypass process or keep the request secret: bypass, do not discuss, just this once."
+      },
+      {
+        "code": "CREDENTIAL_OR_PAYMENT_REQUEST",
+        "severity": "high",
+        "message": "Message requests credentials, MFA codes, or payment/banking details: wire transfer."
+      }
+    ],
+    "score": 9,
+    "verdict": "MALICIOUS",
+    "action": "Block Domain & Escalate"
+  },
+  {
+    "filename": "phishing_email_5_quishing.txt",
+    "sender_display_name": "Google Account Recovery",
+    "sender_email": "no-reply@accounts-google-secure.com",
+    "subject": "Action Required: Prevent Account Lockout",
+    "urls": [],
+    "red_flags": [
+      {
+        "code": "BRAND_DOMAIN_MISMATCH",
+        "severity": "high",
+        "message": "Message references brand 'google' but sender domain 'accounts-google-secure.com' does not match any official domain (google.com, gmail.com, accounts.google.com)."
+      },
+      {
+        "code": "LOOKALIKE_DOMAIN",
+        "severity": "high",
+        "message": "Sender domain 'accounts-google-secure.com' looks like a disguised version of 'google.com' (character substitution / typosquat)."
+      },
+      {
+        "code": "COMBOSQUAT_DOMAIN",
+        "severity": "high",
+        "message": "Sender domain 'accounts-google-secure.com' pads a legitimate brand name with security-related words to appear trustworthy."
+      },
+      {
+        "code": "URGENCY_LANGUAGE",
+        "severity": "medium",
+        "message": "Artificial time-pressure language detected: 30 minutes, locked, lockout."
+      }
+    ],
+    "score": 11,
+    "verdict": "MALICIOUS",
+    "action": "Block Domain & Escalate"
+  }
+]
